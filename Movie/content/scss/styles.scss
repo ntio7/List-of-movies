@@ -1,0 +1,279 @@
+//variables 
+$dark-grey:#333;
+$white:#fff;
+$black:#000;
+$light-grey:#eee;
+$grey:#999;
+$yellow:#ffc107;
+$blue: #0264ce;
+
+$small-devices: 768px;
+$medium-devices: 992px;
+$large-devices: 1200px;
+
+$right: right!important;
+$left: left!important;
+$grid-spacing:3%;
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 12px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    width: 100%
+}
+img{
+    width: 100%;
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (min-width:$small-devices){
+        width: 750px;
+    }
+    @media screen and (min-width:$medium-devices){
+        width: 970px;
+    }
+    @media screen and (min-width:$large-devices){
+        width: 1170px;
+    }
+
+}
+
+body {
+    margin: 0;
+    //comon style
+    .container-fluid {
+        margin: 0 2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .right {
+        float: $right;
+    }
+    //columns
+    .col-1 {
+        width: (100% / 12) - ($grid-spacing * 11 / 12);
+    }
+
+    .col-2 {
+        width: (100% / 6) - ($grid-spacing * 10 / 12);
+    }
+
+    .col-3 {
+        width: (100% / 4) - ($grid-spacing * 9 / 12);
+    }
+
+    .col-4 {
+        width: (100% / 3) - ($grid-spacing * 8 / 12);
+    }
+
+    .col-5 {
+        width: (100% / 2.4) - ($grid-spacing * 7 / 12);
+    }
+
+    .col-6 {
+        width: (100% / 2) - ($grid-spacing * 6 / 12);
+    }
+
+    .col-7 {
+        width: (100% / 1.714285714285714) - ($grid-spacing * 5 / 12);
+    }
+
+    .col-8 {
+        width: (100% / 1.5) - ($grid-spacing * 4 / 12);
+    }
+
+    .col-9 {
+        width: (100% / 1.333333333333333) - ($grid-spacing * 3 / 12);
+    }
+
+    .col-10 {
+        width: (100% / 1.2) - ($grid-spacing * 2 / 12);
+    }
+
+    .col-11 {
+        width: (100% / 1.090909090909091) - ($grid-spacing * 1 / 12);
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8,
+    .col-9, .col-10, .col-11, .col-12 {
+        float: $left
+    }
+    //header section
+    .navbar {
+        height: 120px;
+        padding-top: 27px;
+        background: $dark-grey;
+
+        @media screen and (min-width:$small-devices) {
+            height: 80px;
+        }
+
+        .navbar-header {
+            display: block;
+            text-align: center;
+
+            @media screen and (min-width:$small-devices) {
+                display: inline-block;
+                text-align: left;
+            }
+
+            a.navbar-brand {
+                color: $light-grey;
+                font-size: 2em;
+                text-decoration: none;
+            }
+        }
+
+        .navbar-form {
+            text-align: center;
+            width: 100%;
+
+            @media screen and (min-width:$small-devices) {
+                float: $right;
+                text-align: $right;
+                width: auto;
+            }
+
+            .form-control {
+                padding: 12px;
+                border-radius: 6px;
+                border: none;
+                display: inline-block;
+                vertical-align: middle;
+                width: 48%;
+                margin-top: 15px;
+                margin-right: 0px;
+
+                @media screen and (min-width:$small-devices) {
+                    margin-top: -5px;
+                    width: auto;
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+    //buttons
+    button.show-search-left,
+    button.show-search-right {
+        float: right;
+        background: $light-grey;
+        border: 1px solid $grey;
+        padding: 15px 25px;
+        font-weight: bold;
+
+        @media screen and (min-width:$small-devices) {
+            font-size: 1.5em;
+        }
+
+        &.active {
+            background: $blue;
+            color: $white;
+        }
+    }
+
+    .show-search-left {
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .show-search-right {
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        border-left: none;
+    }
+    //cards
+    .card {
+        background: $light-grey;
+        border: 2px solid $black;
+        border-radius: 10px;
+        padding: 2rem;
+        position: relative;
+        margin: 10px auto;
+
+        .card-info {
+            padding-left: 3rem;
+
+            .card-f {
+                h1 {
+                    @media screen and (min-width:$small-devices) {
+                        font-size: 3em;
+                    }
+                }
+            }
+
+            .card-e {
+                .rated, .runtime {
+                    float: $left;
+                }
+
+                .rated, .runtime, .released {
+                    padding: 5px 10px;
+
+                    @media screen and (min-width:$small-devices) {
+                        font-size: 1.5em;
+                    }
+                }
+
+                .rated {
+                    border: 1px solid $grey;
+                    border-radius: 5px;
+                    font-weight: bold;
+                }
+            }
+
+            .card-d {
+                clear: both;
+                padding-top: 5px;
+
+                @media screen and (min-width:$small-devices) {
+                    font-size: 1.5em;
+                    padding-top: 15px;
+                }
+            }
+
+            a.btn-imdb {
+                background-color: $yellow;
+                color: $white;
+                text-decoration: none;
+                padding: 5px;
+                border-radius: 3px;
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+
+                @media screen and (min-width:$small-devices) {
+                    font-size: 1.5em;
+                    bottom: 3rem;
+                    right: 4rem;
+                    padding: 15px;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+

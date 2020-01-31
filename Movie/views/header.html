@@ -1,0 +1,21 @@
+<header>
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Movie List </a>
+            </div>
+            <form class="navbar-form right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="search">
+                    <select name="users" ng-model="order" class="form-control">
+                        <option value="">-- Sort By --</option>
+                        <option value="Title">Title</option>
+                        <option value="Rated">Rated</option>
+                        <option value="Runtime">Runtime</option>
+                        <option value="Year">Year</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </nav>
+</header>

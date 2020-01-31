@@ -1,0 +1,178 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 12px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  width: 100%; }
+
+img {
+  width: 100%; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media screen and (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+body {
+  margin: 0; }
+  body .container-fluid {
+    margin: 0 2rem; }
+  body ul {
+    list-style: none;
+    padding: 0; }
+  body .row {
+    margin-right: -15px;
+    margin-left: -15px; }
+  body .right {
+    float: right !important; }
+  body .col-1 {
+    width: 5.58333%; }
+  body .col-2 {
+    width: 14.16667%; }
+  body .col-3 {
+    width: 22.75%; }
+  body .col-4 {
+    width: 31.33333%; }
+  body .col-5 {
+    width: 39.91667%; }
+  body .col-6 {
+    width: 48.5%; }
+  body .col-7 {
+    width: 57.08333%; }
+  body .col-8 {
+    width: 65.66667%; }
+  body .col-9 {
+    width: 74.25%; }
+  body .col-10 {
+    width: 82.83333%; }
+  body .col-11 {
+    width: 91.41667%; }
+  body .col-12 {
+    width: 100%; }
+  body .col-1, body .col-2, body .col-3, body .col-4, body .col-5, body .col-6, body .col-7, body .col-8,
+  body .col-9, body .col-10, body .col-11, body .col-12 {
+    float: left !important; }
+  body .navbar {
+    height: 120px;
+    padding-top: 27px;
+    background: #333; }
+    @media screen and (min-width: 768px) {
+      body .navbar {
+        height: 80px; } }
+    body .navbar .navbar-header {
+      display: block;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        body .navbar .navbar-header {
+          display: inline-block;
+          text-align: left; } }
+      body .navbar .navbar-header a.navbar-brand {
+        color: #eee;
+        font-size: 2em;
+        text-decoration: none; }
+    body .navbar .navbar-form {
+      text-align: center;
+      width: 100%; }
+      @media screen and (min-width: 768px) {
+        body .navbar .navbar-form {
+          float: right !important;
+          text-align: right !important;
+          width: auto; } }
+      body .navbar .navbar-form .form-control {
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        display: inline-block;
+        vertical-align: middle;
+        width: 48%;
+        margin-top: 15px;
+        margin-right: 0px; }
+        @media screen and (min-width: 768px) {
+          body .navbar .navbar-form .form-control {
+            margin-top: -5px;
+            width: auto;
+            margin-right: 50px; } }
+  body button.show-search-left,
+  body button.show-search-right {
+    float: right;
+    background: #eee;
+    border: 1px solid #999;
+    padding: 15px 25px;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      body button.show-search-left,
+      body button.show-search-right {
+        font-size: 1.5em; } }
+    body button.show-search-left.active,
+    body button.show-search-right.active {
+      background: #0264ce;
+      color: #fff; }
+  body .show-search-left {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px; }
+  body .show-search-right {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-left: none; }
+  body .card {
+    background: #eee;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    margin: 10px auto; }
+    body .card .card-info {
+      padding-left: 3rem; }
+      @media screen and (min-width: 768px) {
+        body .card .card-info .card-f h1 {
+          font-size: 3em; } }
+      body .card .card-info .card-e .rated, body .card .card-info .card-e .runtime {
+        float: left !important; }
+      body .card .card-info .card-e .rated, body .card .card-info .card-e .runtime, body .card .card-info .card-e .released {
+        padding: 5px 10px; }
+        @media screen and (min-width: 768px) {
+          body .card .card-info .card-e .rated, body .card .card-info .card-e .runtime, body .card .card-info .card-e .released {
+            font-size: 1.5em; } }
+      body .card .card-info .card-e .rated {
+        border: 1px solid #999;
+        border-radius: 5px;
+        font-weight: bold; }
+      body .card .card-info .card-d {
+        clear: both;
+        padding-top: 5px; }
+        @media screen and (min-width: 768px) {
+          body .card .card-info .card-d {
+            font-size: 1.5em;
+            padding-top: 15px; } }
+      body .card .card-info a.btn-imdb {
+        background-color: #ffc107;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem; }
+        @media screen and (min-width: 768px) {
+          body .card .card-info a.btn-imdb {
+            font-size: 1.5em;
+            bottom: 3rem;
+            right: 4rem;
+            padding: 15px;
+            border-radius: 8px; } }

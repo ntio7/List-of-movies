@@ -1,0 +1,28 @@
+<div class="cards-content col-12">
+    <div class="row">
+        <ul>
+            <li ng-repeat="movie in movies | filter : search  | orderBy: order : true">
+                <div class="card col-12">
+                    <div class="col-4">
+                        <img ng-src="{{movie.Poster}}" ng-show="movie.Poster">
+                    </div>
+                    <div class="col-8 card-info">
+                        <div class="card-f col-12">
+                            <h1>{{movie.Title}}</h1>
+                            <hr />
+                        </div>
+                        <div class="card-e">
+                            <div class="rated">{{movie.Rated}}</div>
+                            <div class="runtime">{{movie.Runtime}}</div>
+                            <div class="right released">{{movie.Released}}</div>
+                        </div>
+                        <div class="card-d">
+                            <p>{{movie.Plot}}</p>
+                        </div>
+                        <a class="btn btn-imdb" ng-href="https://www.imdb.com/title/{{movie.imdbID}}/?ref_=nv_sr_srsg_0">View on IMDB</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    <div></div>
+<div>  
