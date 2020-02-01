@@ -21,6 +21,13 @@ MovieApp.directive('movieListApp', function(){
     };
 });
 
+MovieApp.directive('movieDetails', function () {
+    return {
+        templateUrl: 'Views/movieDetails.html',
+        controller: 'MovieController'
+    };
+});
+
 
 
 

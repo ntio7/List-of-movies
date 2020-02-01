@@ -12,7 +12,8 @@
 <body ng-app="MovieApp" >
     <header-app></header-app>
     <div class="container">
-        <movie-list-app></movie-list-app>
+        <movie-list-app data-ng-show="ShowList"></movie-list-app>
+        <movie-Details  data-ng-hide="ShowList"></movie-Details>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
