@@ -1,28 +1,66 @@
-<div class="cards-content col-12">
+<div class="container">
+    <div class="cards-content col-6" data-ng-show="ShowList">
+        <div class="row">
+            <ul>
+                <li ng-repeat="movie in movies | filter : search  | orderBy: order : true">
+                    <div class="card col-12">
+                        <div class="col-4">
+                            <img ng-src="{{movie.Poster}}" ng-show="movie.Poster">
+                        </div>
+                        <div class="col-8 card-info">
+                            <div class="card-f col-12">
+                                <h3>{{movie.Title}}</h3>
+                                <hr />
+                            </div>
+                            <div class="card-e">
+                                <div class="released"><b>Year: </b>{{movie.Year}}</div>
+                            </div>
+                            <div class="card-d">
+
+                            </div>
+                            <a class="btn btn-imdb" ng-click="ShowDetails(movie)" ng-href="">Show Details</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="cards-content col-12" data-ng-hide="ShowList">
     <div class="row">
-        <ul>
-            <li ng-repeat="movie in movies | filter : search  | orderBy: order : true">
-                <div class="card col-12">
-                    <div class="col-4">
-                        <img ng-src="{{movie.Poster}}" ng-show="movie.Poster">
-                    </div>
-                    <div class="col-8 card-info">
-                        <div class="card-f col-12">
-                            <h1>{{movie.Title}}</h1>
-                            <hr />
-                        </div>
-                        <div class="card-e">
-                            <div class="rated">{{movie.Rated}}</div>
-                            <div class="runtime">{{movie.Runtime}}</div>
-                            <div class="right released">{{movie.Released}}</div>
-                        </div>
-                        <div class="card-d">
-                            <p>{{movie.Plot}}</p>
-                        </div>
-                        <a class="btn btn-imdb" ng-href="https://www.imdb.com/title/{{movie.imdbID}}/?ref_=nv_sr_srsg_0">View on IMDB</a>
-                    </div>
+        <div class="card col-12">
+            <div class="col-4">
+                <img ng-src="{{movie.Poster}}" ng-show="movie.Poster">
+            </div>
+            <div class="col-8 card-info">
+                <div class="card-f col-12">
+                    <h1>{{movie.Title}}</h1>
+                    <hr />
                 </div>
-            </li>
-        </ul>
-    <div></div>
-<div>  
+                <div class="card-e">
+                    <div class="rated">{{movie.Rated}}</div>
+                    <div class="runtime">{{movie.Runtime}}</div>
+                    <div class="right released">{{movie.Released}}</div>
+                </div>
+
+                <div class="card-d">
+                    <p><b>Writer:   </b>{{movie.Writer}}</p>
+                </div>
+                <div class="card-d">
+                    <p><b>Actors:   </b>{{movie.Actors}}</p>
+                </div>
+                <div class="card-d">
+                    <p><b>Genre:   </b>{{movie.Genre}}</p>
+                </div>
+                <div class="card-d">
+                    <p><b>Plot:   </b>{{movie.Plot}}</p>
+                </div>
+                <div class="card-d">
+                
+                </div>
+                <a class="btn btn-imdb" ng-click="ShowDetails(movie)" ng-href="">movies list</a>
+            </div>
+        </div>
+    </div>
+</div>
