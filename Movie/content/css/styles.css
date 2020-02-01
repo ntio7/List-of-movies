@@ -168,7 +168,8 @@ body {
         border-radius: 3px;
         position: absolute;
         bottom: 1rem;
-        right: 1rem; }
+        right: 1rem;
+        cursor: pointer; }
         @media screen and (min-width: 768px) {
           body .card .card-info a.btn-imdb {
             font-size: 1.5em;
