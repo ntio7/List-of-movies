@@ -1,5 +1,10 @@
 // Libs
-const {series, dest, src, watch} = require('gulp');
+const {
+    series,
+    dest,
+    src,
+    watch
+} = require('gulp');
 const sass = require('gulp-sass');
 const clean = require('gulp-clean');
 const purge = require('gulp-css-purge');
@@ -12,17 +17,21 @@ const ORIGIN_SASS_FOLDER = './content/scss/**/*.scss';
 function buildSass(cb) {
     src([ORIGIN_SASS_FOLDER])
         .pipe(sass())
-        //.pipe(purge())
-        //.pipe(minify())
+        .pipe(purge())
+        .pipe(minify())
         .pipe(dest(`${DESTINATION_ASSET_FOLDER}/css`));
     cb();
 }
 
 function cleanSass(cb) {
     src([
-        `${DESTINATION_ASSET_FOLDER}/css`
-    ], {allowEmpty: true})
-        .pipe(clean({force: true}));
+            `${DESTINATION_ASSET_FOLDER}/css`
+        ], {
+            allowEmpty: true
+        })
+        .pipe(clean({
+            force: true
+        }));
     cb();
 }
 
@@ -32,8 +41,7 @@ function watchSass(cb) {
 }
 
 // add here all default task
-exports.default = series
-(
+exports.default = series(
     cleanSass,
     buildSass,
 );
@@ -42,4 +50,3 @@ exports.default = series
 exports.watchSass = series(
     watchSass
 );
-
